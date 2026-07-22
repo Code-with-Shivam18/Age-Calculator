@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Main Header Navbar -->
+    <header class="main-header">
+      <nav class="navbar">
+        <div class="logo">Age Calculator</div>
+
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Fitness</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+
+        <button class="login-btn">Login</button>
+      </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="main-container">
+      <div class="calculator-card">
+        <h2>Age Calculator</h2>
+        <p class="description">
+          Determine the age or interval between two dates in years, months,
+          weeks, days, hours, minutes, and seconds.
+        </p>
+
+        <form class="calc-form">
+          <!-- Date of Birth Section -->
+          <div class="input-group">
+            <label for="dob-month">Date of Birth</label>
+            <div class="date-inputs">
+              <select id="dob-month">
+                <option value="Jan">Jan</option>
+                <option value="Feb" selected>Feb</option>
+                <option value="Mar">Mar</option>
+                <option value="Apr">Apr</option>
+                <option value="May">May</option>
+                <option value="Jun">Jun</option>
+                <option value="Jul">Jul</option>
+                <option value="Aug">Aug</option>
+                <option value="Sep">Sep</option>
+                <option value="Oct">Oct</option>
+                <option value="Nov">Nov</option>
+                <option value="Dec">Dec</option>
+              </select>
+              <input type="number" id="dob-day" value="5" min="1" max="31" />
+              <input
+                type="number"
+                id="dob-year"
+                value="2026"
+                min="1900"
+                max="2099"
+              />
+            </div>
+          </div>
+
+          <!-- Age at the Date of Section -->
+          <div class="input-group">
+            <label for="target-month">Age at the Date of</label>
+            <div class="date-inputs">
+              <select id="target-month">
+                <option value="Jan">Jan</option>
+                <option value="Feb">Feb</option>
+                <option value="Mar">Mar</option>
+                <option value="Apr">Apr</option>
+                <option value="May">May</option>
+                <option value="Jun">Jun</option>
+                <option value="Jul" selected>Jul</option>
+                <option value="Aug">Aug</option>
+                <option value="Sep">Sep</option>
+                <option value="Oct">Oct</option>
+                <option value="Nov">Nov</option>
+                <option value="Dec">Dec</option>
+              </select>
+              <input
+                type="number"
+                id="target-day"
+                value="21"
+                min="1"
+                max="31"
+              />
+              <input
+                type="number"
+                id="target-year"
+                value="2026"
+                min="1900"
+                max="2099"
+              />
+            </div>
+          </div>
+
+          <!-- Calculate Button -->
+          <button type="button" class="btn-calculate">Calculate</button>
+        </form>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
