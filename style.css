@@ -194,3 +194,7 @@ body {
     padding: 20px;
   }
 }
+.login-btn,a{
+  text-decoration: none !important;
+  color: #0e0e0e;
+}
