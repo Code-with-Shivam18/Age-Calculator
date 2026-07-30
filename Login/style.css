@@ -98,3 +98,41 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #4338ca;
 }
+/* Use # for IDs instead of . */
+#email-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+/* Target the input inside the ID container */
+#email-container input {
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+/* Style the message */
+.validation-msg {
+  display: block;
+  font-size: 12px;
+  margin-top: 4px;
+  min-height: 16px;
+}
+
+/* Border state colors */
+#Email.valid {
+  border-color: #16a34a;
+}
+
+#Email.invalid {
+  border-color: #dc2626;
+}
+#Email, 
+.email input {
+  width: 100%;
+  box-sizing: border-box; /* Prevents padding from breaking the width */
+}

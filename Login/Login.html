@@ -5,18 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Age Calculatar Page</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Emailjs -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("wBiejS95zLuZJguiI");
+      })();
+    </script>
   </head>
   <body>
     <div class="main">
       <form action="sumbit" id="form">
         <div class="login">
           <label for="Email">Enter Your Email</label>
-          <input
-            type="email"
-            name="Email"
-            id="Email"
-            placeholder="Enter email address"
-          />
+          <div class="email-container">
+            <input
+              type="email"
+              name="Email"
+              id="Email"
+              placeholder="Enter email address"
+            />
+          </div>
           <label for="Password">Enter Password</label>
           <input
             type="password"
@@ -24,7 +37,9 @@
             id="password"
             placeholder="Enter password"
           />
-          <button id="Otp">Send Otp</button>
+          <button type="button" id="Otp" onclick="sendOtp(event)">
+            Send Otp
+          </button>
           <input
             type="text"
             inputmode="numeric"
@@ -37,5 +52,6 @@
         <button type="submit">Login</button>
       </form>
     </div>
+    <script src="login.js"></script>
   </body>
 </html>
